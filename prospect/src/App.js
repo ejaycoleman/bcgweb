@@ -1,33 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Menu } from 'antd';
+import { Row, Col, Icon } from 'antd';
 import User from './User'
 
 
 class App extends Component {
-  state = {
-    current: 'mail',
-  }
 
-  handleClick = (e) => {
-    console.log('click ', e);
-    this.setState({
-      current: e.key,
-    });
-  }
 
   render() {
     return (
       <div className="App">
-        <Menu
-          onClick={this.handleClick}
-          selectedKeys={[this.state.current]}
-          mode="horizontal"
-        >
-          <span style={{color: '#91268F', fontWeight: 500, fontSize: 20}}>Prospect</span>
-        </Menu>
+        <Row style={{height: 40}}>
+          <Col span={2}><Icon type="bars" style={{position: 'absolute', fontSize: 20, marginTop: 10, color: '#91268F'}} /></Col>
+          <Col span={7} />
+          <Col span={6} style={{paddingTop: 0}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
+        </Row>
         <User />
+
       </div>
     );
   }
