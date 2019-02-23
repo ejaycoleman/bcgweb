@@ -6,6 +6,7 @@ import Anna from './Anna'
 import ListPeople from './ListPeople'
 import Feed from './Feed'
 import MyProfile from './MyProfile'
+import Messages from './Messages'
 
 import './App.css';
 
@@ -66,9 +67,9 @@ class AppRouter extends React.Component {
 	        <Sidebar
 		        	sidebar={
 			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, paddingTop: 50}}>
-			        		<div key="mentees" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"list"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Mentees</span></Link></div>
-			        		<div key="feed" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"/"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Feed</span></Link></div>
-					        <div key="connect" style={{paddingTop: 20}} ><a style={{color: '#91268F'}}><Icon type="user-add" style={{paddingRight: 10}} /><span>Connect</span></a></div>
+			        		<div key="messages" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"messages"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Messages</span></Link></div>
+			        		<div key="feed" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"/"} style={{color: '#91268F'}}><Icon type="align-left" style={{paddingRight: 10}} /><span>Feed</span></Link></div>
+					        <div key="connect" style={{paddingTop: 20}} ><Link onClick={() => this.toggleLeft()} to={"list"} style={{color: '#91268F'}}><Icon type="user-add" style={{paddingRight: 10}} /><span>Connect</span></Link></div>
 					        <div key="myprofile" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"profile"} style={{color: '#91268F'}}><Icon type="idcard" style={{paddingRight: 10}} /><span>My Profile</span></Link></div>
 			        	</div>
 		        	}
@@ -88,6 +89,7 @@ class AppRouter extends React.Component {
 	       	 <Route path="/anna" component={Anna}/>
 	       	 <Route path="/list" component={ListPeople}/>
 	       	 <Route path="/profile" component={MyProfile}/>
+	       	 <Route path="/messages" component={Messages}/>
 	       	 <Route path="/" exact component={Feed}/>
 	       	</div>
       	</div>
