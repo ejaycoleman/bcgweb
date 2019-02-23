@@ -29,16 +29,6 @@ const data = [
     component: anna
   },
   {
-    name: 'Daniela',
-    about: "I'm good at writing CVs!",
-    component: pp3
-  },
-  {
-    name: 'Gabriel',
-    about: "Painter in-the-making",
-    component: pp4
-  },
-  {
     name: 'Jesse',
     about: "Photographer",
     component: pp5

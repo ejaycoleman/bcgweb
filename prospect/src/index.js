@@ -10,7 +10,7 @@ import Messages from './Messages'
 
 import './App.css';
 
-import { Row, Col, Icon, Menu } from 'antd';
+import { Row, Col, Icon, Menu, Badge } from 'antd';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -67,7 +67,7 @@ class AppRouter extends React.Component {
 	        <Sidebar
 		        	sidebar={
 			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, paddingTop: 50}}>
-			        		<div key="messages" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"messages"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Messages</span></Link></div>
+			        		<div key="messages" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"messages"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Messages</span></Link><Badge count={1} style={{ backgroundColor: '#52c41a', marginTop: -20 }} /></div>
 			        		<div key="feed" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"/"} style={{color: '#91268F'}}><Icon type="align-left" style={{paddingRight: 10}} /><span>Feed</span></Link></div>
 					        <div key="connect" style={{paddingTop: 20}} ><Link onClick={() => this.toggleLeft()} to={"list"} style={{color: '#91268F'}}><Icon type="user-add" style={{paddingRight: 10}} /><span>Connect</span></Link></div>
 					        <div key="myprofile" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"profile"} style={{color: '#91268F'}}><Icon type="idcard" style={{paddingRight: 10}} /><span>My Profile</span></Link></div>
