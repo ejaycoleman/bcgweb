@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import John from './John';
 import Anna from './Anna'
+import ListPeople from './ListPeople'
 
 import './App.css';
 
@@ -35,6 +36,7 @@ class AppRouter extends React.Component {
 	        <div className="App">
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
+	       	 <Route path="/list" component={ListPeople}/>
 	       	</div>
       	</div>
  			</Router>
