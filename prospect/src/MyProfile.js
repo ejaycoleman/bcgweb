@@ -21,7 +21,7 @@ class MyProfile extends Component {
         <div style={{paddingTop: 10}}>
           <Avatar size={150} icon="user" />
           <h2 style={{paddingTop: 10}}>Derek Williams</h2>
-          <h4 style={{marginTop: -10}}>Mentor - Senior Software Developer</h4>
+          <h4 style={{marginTop: -10}}>Senior Software Developer <Badge count={'Mentor'} style={{zIndex: 0, backgroundColor: '#91268F', marginTop: -2 }}/></h4>
         </div>
         <div style={{textAlign: 'left', marginLeft: '5%', marginTop: 1, marginRight: '5%'}}>
           
