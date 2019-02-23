@@ -41,12 +41,15 @@ class AppRouter extends React.Component {
       	<div>
 
       		{/* <Route path={`/john`} component={John}/> */}
-	        <Row style={{height: 50, paddingBottom: 10, paddingLeft: 10, paddingRight: 10, borderBottom: '.5px solid grey'}}>
-	        	
-	          {/* <Col span={2}></Col> */}
-	          <Col span={8} />
-	          <Col span={8} style={{paddingTop: 0, textAlign: 'center'}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
-	        </Row>
+      		<div style={{position: 'fixed', height: 50, width: '100%', backgroundColor: '#fff', zIndex: 10}}>
+      			<Row style={{height: 50, paddingTop: 5, paddingBottom: 10, paddingLeft: 10, paddingRight: 10, borderBottom: '.5px solid grey'}}>
+		        	
+		          {/* <Col span={2}></Col> */}
+		          <Col span={8} />
+		          <Col span={8} style={{paddingTop: 0, textAlign: 'center'}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
+		        </Row>
+      		</div>
+	        
 
 	        {/* {this.state.expanded && ( */}
 	        {/* 	<Menu */}
@@ -61,7 +64,7 @@ class AppRouter extends React.Component {
 	        {/* )} */}
 	        <Sidebar
 		        	sidebar={
-			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, }}>
+			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, paddingTop: 50}}>
 			        		<div key="mentees" style={{paddingTop: 20}}><a><Icon type="message" theme="filled" /><span>Mentees</span></a></div>
 					        <div key="connect" style={{paddingTop: 20}} ><a><Icon type="user-add" /><span>Connect</span></a></div>
 					        <div key="myprofile" style={{paddingTop: 20}}><a><Icon type="idcard" theme="filled" /><span>My Profile</span></a></div>
@@ -69,16 +72,16 @@ class AppRouter extends React.Component {
 		        	}
 		        open={this.state.expanded}
 		        onSetOpen={this.toggleLeft}
-		        styles={{ sidebar: { background: "white",height: '100%', paddingRight: 20, paddingLeft: 20, width: '60%' } }}
+		        styles={{ sidebar: { background: "white",height: '100%', paddingRight: 20, paddingLeft: 20, width: '60%', position: 'fixed' } }}
 		      >
 		        {/* <button onClick={() => this.onSetSidebarOpen(true)}> */}
-		          <Icon onClick={() => this.toggleLeft()} type="bars" style={{paddingLeft: 10, position: 'absolute', fontSize: 20, marginTop: 10, color: '#91268F'}} />
+		          <Icon onClick={() => this.toggleLeft()} type="bars" style={{zIndex: 10, paddingLeft: 10, position: 'fixed', fontSize: 20, marginTop: 15, color: '#91268F'}} />
 		        {/* </button> */}
 		      </Sidebar>
 
 	        
 	        
-	        <div className="App">
+	        <div className="App" style={{paddingTop: 50}}>
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
 	       	 {/* <Route path="/" component={ListPeople}/> */}
