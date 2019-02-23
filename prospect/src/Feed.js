@@ -7,17 +7,17 @@ import pp4 from './assets/pp4.jpg'
 import pp5 from './assets/pp5.jpg'
 
 const listData = [
-  {href: 'http://ant.design',
+  {
     avatar: pp3,
     name: 'Daniela',
     description: 'Thoroughly enjoyed teaching the local high school how to play guitar!',
     img: 'https://images.pexels.com/photos/225230/pexels-photo-225230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
-  {href: 'http://ant.design',
+  {
     avatar: pp4,
     name: 'Gabriel',
     description: 'Had an incredible opportunity creating a website for a well known company last week.',
     img: 'https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
-  {href: 'http://ant.design',
+  {
     avatar: pp5,
     name: 'Jesse',
     description: 'I was involved in a once-in-a-lifetime photoshoot for a clothing company last Monday.',

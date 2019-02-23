@@ -18,7 +18,7 @@ class John extends Component {
         <div style={{textAlign: 'left', marginLeft: '5%', marginTop: 7, marginRight: '5%'}}>
           <h1>John</h1>
           <h3>Hi, I'm John. I'm an aspiring guitarist, hoping to teach others how to play.</h3>
-          <h2 style={{paddingTop: 15}}>Acheivements</h2>
+          <h2 style={{paddingTop: 15}}>Achievements</h2>
           <List
             size="small"
             bordered
