@@ -65,7 +65,8 @@ class AppRouter extends React.Component {
 	        <Sidebar
 		        	sidebar={
 			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, paddingTop: 50}}>
-			        		<div key="mentees" style={{paddingTop: 20}}><a style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Mentees</span></a></div>
+			        		<div key="mentees" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"list"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Mentees</span></Link></div>
+			        		<div key="mentees" style={{paddingTop: 20}}><Link onClick={() => this.toggleLeft()} to={"/"} style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Feed</span></Link></div>
 					        <div key="connect" style={{paddingTop: 20}} ><a style={{color: '#91268F'}}><Icon type="user-add" style={{paddingRight: 10}} /><span>Connect</span></a></div>
 					        <div key="myprofile" style={{paddingTop: 20}}><a style={{color: '#91268F'}}><Icon type="idcard" style={{paddingRight: 10}} /><span>My Profile</span></a></div>
 			        	</div>
@@ -84,8 +85,8 @@ class AppRouter extends React.Component {
 	        <div className="App" style={{paddingTop: 50}}>
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
-	       	 {/* <Route path="/" component={ListPeople}/> */}
-	       	 <Route path="/" component={Feed}/>
+	       	 <Route path="/list" component={ListPeople}/>
+	       	 <Route path="/" exact component={Feed}/>
 	       	</div>
       	</div>
  			</Router>

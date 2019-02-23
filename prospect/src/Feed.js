@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 import { List, Avatar, Icon, Row, Col } from 'antd';
 
 import anna from './assets/anna.png'
+import john from './assets/john.jpg'
 
-const listData = [];
-for (let i = 0; i < 3; i++) {
-  listData.push({
-    href: 'http://ant.design',
-    title: `ant design part ${i}`,
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+const listData = [
+  {href: 'http://ant.design',
+    avatar: john,
     name: 'John',
-    description: 'Had a great time doing work experience'
-  });
-}
+    description: 'Thoroughly enjoyed teaching the local high school how to play guitar!'},
+  {href: 'http://ant.design',
+    avatar: anna,
+    name: 'Anna',
+    description: 'Had an incredible opportunity creating a website for a well known company last week.'},
+];
 
 
 
@@ -41,7 +42,7 @@ class Feed extends Component {
               <Col span={4} style={{marginTop: 8}}><h4>{item.name}</h4></Col>
             </Row>
             <h3 style={{textAlign: 'left'}}>{item.description}</h3>
-            <img width={272} style={{paddingBottom: 10}} alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
+            <img width={272} style={{paddingBottom: 10}} alt="logo" src="http://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
           </div>
         )}
       />
