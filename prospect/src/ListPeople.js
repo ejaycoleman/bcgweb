@@ -12,12 +12,14 @@ import {
 const data = [
   {
     name: 'John',
-    about: 'person one'
+    about: 'person one',
+    component: john
   },
   {
     name: 'Anna',
-    about: 'person two'
-  }
+    about: 'person two',
+    component: anna
+  },
 ];
 
 class ListPeople extends Component {
@@ -31,8 +33,8 @@ class ListPeople extends Component {
         renderItem={item => (
           <List.Item>
             <List.Item.Meta
-              avatar={<Avatar size={50} src={item.name === 'John'? john : anna} />}
-              title={<Link to={item.name === 'John'? 'john' : 'anna'}>{item.name}</Link>}
+              avatar={<Avatar size={50} src={item.component} />}
+              title={<Link to={item.name.toLowerCase()}>{item.name}</Link>}
               description={item.about}
             />
           </List.Item>
