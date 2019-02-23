@@ -26,10 +26,10 @@ class AppRouter extends React.Component {
       <Router>
       	<div>
       		{/* <Route path={`/john`} component={John}/> */}
-	        <Row style={{height: 40}}>
+	        <Row style={{height: 40, marginLeft: 10, marginRight: 10}}>
 	          <Col span={2}><Icon type="bars" style={{position: 'absolute', fontSize: 20, marginTop: 10, color: '#91268F'}} /></Col>
-	          <Col span={7} />
-	          <Col span={6} style={{paddingTop: 0}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
+	          <Col span={6} />
+	          <Col span={8} style={{paddingTop: 0, textAlign: 'center'}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
 	        </Row>
 	        
 	        <div className="App">

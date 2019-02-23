@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { List } from 'antd'
 
-import anna from './assets/anna.jpg'
+import anna from './assets/anna.png'
 
 const data = [
   'Codeacademy HTML',
