@@ -65,9 +65,9 @@ class AppRouter extends React.Component {
 	        <Sidebar
 		        	sidebar={
 			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, paddingTop: 50}}>
-			        		<div key="mentees" style={{paddingTop: 20}}><a><Icon type="message" theme="filled" /><span>Mentees</span></a></div>
-					        <div key="connect" style={{paddingTop: 20}} ><a><Icon type="user-add" /><span>Connect</span></a></div>
-					        <div key="myprofile" style={{paddingTop: 20}}><a><Icon type="idcard" theme="filled" /><span>My Profile</span></a></div>
+			        		<div key="mentees" style={{paddingTop: 20}}><a style={{color: '#91268F'}}><Icon type="message" style={{paddingRight: 10}} /><span>Mentees</span></a></div>
+					        <div key="connect" style={{paddingTop: 20}} ><a style={{color: '#91268F'}}><Icon type="user-add" style={{paddingRight: 10}} /><span>Connect</span></a></div>
+					        <div key="myprofile" style={{paddingTop: 20}}><a style={{color: '#91268F'}}><Icon type="idcard" style={{paddingRight: 10}} /><span>My Profile</span></a></div>
 			        	</div>
 		        	}
 		        open={this.state.expanded}
