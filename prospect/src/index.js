@@ -39,7 +39,7 @@ class AppRouter extends React.Component {
       <Router>
       	<div>
       		{/* <Route path={`/john`} component={John}/> */}
-	        <Row style={{height: 40, marginLeft: 10, marginRight: 10}}>
+	        <Row style={{height: 50, paddingBottom: 10, paddingLeft: 10, paddingRight: 10, borderBottom: '.5px solid grey'}}>
 	        	
 	          {/* <Col span={2}></Col> */}
 	          <Col span={8} />
@@ -79,7 +79,7 @@ class AppRouter extends React.Component {
 	        <div className="App">
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
-	       	 <Route path="/list" component={ListPeople}/>
+	       	 <Route path="/" component={ListPeople}/>
 	       	</div>
       	</div>
  			</Router>
