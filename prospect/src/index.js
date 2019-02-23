@@ -11,6 +11,8 @@ import { Row, Col, Icon, Menu } from 'antd';
 
 import * as serviceWorker from './serviceWorker';
 
+import Sidebar from "react-sidebar";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -38,24 +40,41 @@ class AppRouter extends React.Component {
       	<div>
       		{/* <Route path={`/john`} component={John}/> */}
 	        <Row style={{height: 40, marginLeft: 10, marginRight: 10}}>
-	          <Col span={2}><Icon onClick={() => this.toggleLeft()} type="bars" style={{position: 'absolute', fontSize: 20, marginTop: 10, color: '#91268F'}} /></Col>
-	          <Col span={6} />
+	        	
+	          {/* <Col span={2}></Col> */}
+	          <Col span={8} />
 	          <Col span={8} style={{paddingTop: 0, textAlign: 'center'}}><span style={{color: '#91268F', fontWeight: 600, fontSize: 25, }}>Prospect</span></Col>
 	        </Row>
 
-	        {this.state.expanded && (
-	        	<Menu
-			        onClick={this.handleClick}
-			        style={{ width: 256, position: 'absolute', zIndex: 10, height: '96%' }}
-			        defaultSelectedKeys={['1']}
-			        defaultOpenKeys={['sub1']}
-			        mode="inline"
-			      >
-			        <Menu.Item key="mentees" ><span><Icon type="message" theme="filled" /><span>Mentees</span></span></Menu.Item>
-			        <Menu.Item key="connect" ><span><Icon type="user-add" /><span>Connect</span></span></Menu.Item>
-			        <Menu.Item key="myprofile" ><span><Icon type="idcard" theme="filled" /><span>My Profile</span></span></Menu.Item>
-			      </Menu>
-	        )}
+	        {/* {this.state.expanded && ( */}
+	        {/* 	<Menu */}
+			      {/*   onClick={this.handleClick} */}
+			      {/*   style={{ width: 256, position: 'absolute', zIndex: 10, height: '96%' }} */}
+			      {/*   defaultSelectedKeys={['1']} */}
+			      {/*   defaultOpenKeys={['sub1']} */}
+			      {/*   mode="inline" */}
+			      {/* > */}
+			      {/*    */}
+			      {/* </Menu> */}
+	        {/* )} */}
+	        <Sidebar
+		        	sidebar={
+			        	<div style={{flex: 1, flexDirection: 'column', fontSize: 20, }}>
+			        		<div key="mentees" style={{paddingTop: 20}}><a><Icon type="message" theme="filled" /><span>Mentees</span></a></div>
+					        <div key="connect" style={{paddingTop: 20}} ><a><Icon type="user-add" /><span>Connect</span></a></div>
+					        <div key="myprofile" style={{paddingTop: 20}}><a><Icon type="idcard" theme="filled" /><span>My Profile</span></a></div>
+			        	</div>
+		        	}
+		        open={this.state.expanded}
+		        onSetOpen={this.toggleLeft}
+		        styles={{ sidebar: { background: "white",height: '100%', paddingRight: 20, paddingLeft: 20, width: '60%' } }}
+		      >
+		        {/* <button onClick={() => this.onSetSidebarOpen(true)}> */}
+		          <Icon onClick={() => this.toggleLeft()} type="bars" style={{paddingLeft: 10, position: 'absolute', fontSize: 20, marginTop: 10, color: '#91268F'}} />
+		        {/* </button> */}
+		      </Sidebar>
+
+	        
 	        
 	        <div className="App">
 	       	 <Route path="/john" component={John}/>
