@@ -4,9 +4,6 @@ import { List, Avatar } from 'antd';
 
 import john from './assets/john.jpg'
 import anna from './assets/anna.png'
-import pp3 from './assets/pp3.jpg'
-import pp4 from './assets/pp4.jpg'
-import pp5 from './assets/pp5.jpg'
 import pp6 from './assets/pp6.jpg'
 import pp7 from './assets/pp7.jpg'
 import pp8 from './assets/pp8.jpg'
@@ -27,11 +24,6 @@ const data = [
     name: 'Anna',
     about: "I'll make you a website",
     component: anna
-  },
-  {
-    name: 'Jesse',
-    about: "Photographer",
-    component: pp5
   },
   {
     name: 'Chris',
