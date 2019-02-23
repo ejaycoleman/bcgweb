@@ -4,6 +4,7 @@ import './index.css';
 import John from './John';
 import Anna from './Anna'
 import ListPeople from './ListPeople'
+import Feed from './Feed'
 
 import './App.css';
 
@@ -38,6 +39,7 @@ class AppRouter extends React.Component {
     return (
       <Router>
       	<div>
+
       		{/* <Route path={`/john`} component={John}/> */}
 	        <Row style={{height: 50, paddingBottom: 10, paddingLeft: 10, paddingRight: 10, borderBottom: '.5px solid grey'}}>
 	        	
@@ -79,7 +81,8 @@ class AppRouter extends React.Component {
 	        <div className="App">
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
-	       	 <Route path="/" component={ListPeople}/>
+	       	 {/* <Route path="/" component={ListPeople}/> */}
+	       	 <Route path="/" component={Feed}/>
 	       	</div>
       	</div>
  			</Router>

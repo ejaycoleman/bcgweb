@@ -9,7 +9,7 @@ const data = [
   'Codeacademy CSS'
 ];
 
-class John extends Component {
+class Anna extends Component {
 
   render() {
     return (
@@ -31,4 +31,4 @@ class John extends Component {
   }
 }
 
-export default John;
+export default Anna;
