@@ -64,7 +64,7 @@ class ListPeople extends Component {
           <List.Item>
             <List.Item.Meta
               avatar={<Avatar size={50} src={item.component} />}
-              title={item.name === 'John' || item.name === 'Anna' ? <Link to={item.name.toLowerCase()}>{item.name}</Link> : item.name}
+              title={item.name === 'John' || item.name === 'Anna' ? <Link to={item.name.toLowerCase()} onClick={() => this.props.showBack()}>{item.name}</Link> : item.name}
               description={item.about}
             />
           </List.Item>

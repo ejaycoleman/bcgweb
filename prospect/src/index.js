@@ -32,7 +32,7 @@ const customHistory = createBrowserHistory()
 class AppRouter extends React.Component {
 	state = {
 		expanded: false,
-		isBackButton: true
+		isBackButton: false
 	}
 
 	toggleLeft = () => {
@@ -42,8 +42,17 @@ class AppRouter extends React.Component {
 
 	goBack = () => {
 		customHistory.goBack()
+		this.setState({isBackButton: false})
 		console.log("aewjh")
 	}
+
+	setToBack = () => {
+		this.setState({isBackButton: true})
+	}
+
+ componentDidMount() {
+    if (window.location.pathname === '/john' || window.location.pathname === '/anna') this.setState({isBackButton: true});
+  }
 
   render() {
     return (
@@ -102,7 +111,7 @@ class AppRouter extends React.Component {
 	        <div className="App" style={{paddingTop: 50}}>
 	       	 <Route path="/john" component={John}/>
 	       	 <Route path="/anna" component={Anna}/>
-	       	 <Route path="/list" component={ListPeople}/>
+	       	 <Route path="/list" component={() => <ListPeople showBack={this.setToBack} />}/>
 	       	 <Route path="/profile" component={MyProfile}/>
 	       	 <Route path="/messages" component={Messages}/>
 	       	 <Route path="/" exact component={Feed}/>
