@@ -22,14 +22,17 @@ import {
   Link
 } from 'react-router-dom'
 
+import createBrowserHistory from 'history/createBrowserHistory'
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
-
+const customHistory = createBrowserHistory()
 
 
 class AppRouter extends React.Component {
 	state = {
-		expanded: false
+		expanded: false,
+		isBackButton: true
 	}
 
 	toggleLeft = () => {
@@ -37,9 +40,14 @@ class AppRouter extends React.Component {
 		console.log("expanded")
 	}
 
+	goBack = () => {
+		customHistory.goBack()
+		console.log("aewjh")
+	}
+
   render() {
     return (
-      <Router>
+      <Router history={customHistory}>
       	<div>
 
       		{/* <Route path={`/john`} component={John}/> */}
@@ -78,7 +86,14 @@ class AppRouter extends React.Component {
 		        styles={{ sidebar: { background: "white",height: '100%', paddingRight: 20, paddingLeft: 20, width: '60%', position: 'fixed' } }}
 		      >
 		        {/* <button onClick={() => this.onSetSidebarOpen(true)}> */}
-		          <Icon onClick={() => this.toggleLeft()} type="bars" style={{zIndex: 10, paddingLeft: 10, position: 'fixed', fontSize: 20, marginTop: 15, color: '#91268F'}} />
+		        <div>
+		        	{this.state.isBackButton? 
+		        		<Icon onClick={() => this.goBack()} type="left" style={{zIndex: 10, paddingLeft: 10, position: 'fixed', fontSize: 20, marginTop: 15, color: '#91268F'}} />
+		        		:
+		        		<Icon onClick={() => this.toggleLeft()} type="bars" style={{zIndex: 10, paddingLeft: 10, position: 'fixed', fontSize: 20, marginTop: 15, color: '#91268F'}} />
+		        	}
+		        </div>
+		          
 		        {/* </button> */}
 		      </Sidebar>
 
